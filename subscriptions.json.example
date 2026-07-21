@@ -1,0 +1,14 @@
+{
+    "headers": {
+        "User-Agent": "ClashMeta/2.11.27",
+        "x-hwid": "YOUR_HARDWARE_ID"
+    },
+    "subscriptions": [
+        {
+            "name": "provider-name",
+            "url": "https://example.com/YOUR_TOKEN",
+            "path": "~/.config/mihomo/providers/provider-name.yaml",
+            "decode": false
+        }
+    ]
+}
