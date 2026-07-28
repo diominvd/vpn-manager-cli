@@ -12,7 +12,7 @@ from pathlib import Path
 
 import requests
 
-CONFIG_PATH = Path(__file__).parent / "subscriptions.json"
+CONFIG_PATH = Path(__file__).resolve().parent / "subscriptions.json"
 
 
 def load_config() -> dict:
