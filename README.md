@@ -206,6 +206,8 @@ as a regular HTTP/SOCKS5 proxy (`127.0.0.1:7890`).
 | Service runs but websites don't load | Your proxy nodes may be down. Check the mihomo dashboard at `http://127.0.0.1:9090` or via `curl http://127.0.0.1:9090/proxies`. |
 | `vpn: command not found` | Ensure the zsh function is autoloaded — check `fpath` and `autoload` in `~/.zshenv`. |
 | mihomo updated and TUN stopped working | Re-run `sudo setcap` — package updates reset file capabilities. |
+| "Limit exceeded" after changing subscription | Delete the cached provider file and restart: `rm ~/.config/mihomo/providers/<name>.yaml && vpn --restart`. The cached file may contain stale "limit exceeded" dummy nodes from the old token. |
+| Subscription URL changed | Update **both** `subscriptions.json` (for `vpn --update`) and `config.yaml` `proxy-providers` section (for mihomo runtime fetching). |
 
 ## Acknowledgments
 
